@@ -1,0 +1,60 @@
+* {
+margin:0; padding:0; box-sizing:border-box;
+outline:none
+}
+
+
+.inputset {
+display:inline-block;
+border:1px solid #000;
+height:30px; padding:0 5px
+}
+
+.inputset select,
+.inputset input {
+background:none; border:none;
+height:30px; padding: 0 5px
+}
+
+.inputset.money { }
+.inputset.money input {text-align:right}
+
+.phoneset {
+display:flex; align-items:center
+}
+.phoneset .bar {margin:0 5px}
+.phoneset .inputset:first-child {
+flex:none;
+}
+.phoneset .inputset {flex:1}
+.phoneset .inputset + .inputset {margin-left:10px}
+.phoneset .inputset input {width:100%}
+
+.phoneset.release {display:block}
+.phoneset.release .inputset { }
+.phoneset.release .inputset input {
+width:100%; text-align:center
+}
+
+.phoneset.type1 {
+flex-direction:column; align-items:inherit
+}
+.phoneset.type1 .bar {display:none}
+.phoneset.type1 .inputset { }
+.phoneset.type1 .inputset ~ .inputset {margin-top:10px}
+.phoneset.type1 .inputset select {width:100%}
+
+.icon {display:inline-block; width:20px; height:22px; background:url('../img/inputiconset.png') no-repeat 0 0}
+.icon.search {background-position: -20px 0}
+.icon.cal { }
+
+.inputset.date {display:table}
+.inputset.date input {width:100%; display:table-cell}
+.inputset.date .icon.cal {display:table-cell; background-position:0 center}
+
+
+
+
+
+
+
