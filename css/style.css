@@ -28,25 +28,30 @@ font-weight:600;
 padding:20px 40px
 }
 
-.mainwrap {min-width:1280px; margin:0 auto; margin:50px 0}
-.mainwrap .banner { }
-.mainwrap .banner img {margin:20px}
+.mainwrap {min-width:1280px; margin:50px 0}
+.mainwrap .banner {}
+.mainwrap .banner img { }
 
 .subwrap {min-width:1280px; margin:0 auto}
-.subwrap .ch1 {height:800px}
-.subwrap .ch2 {height:1200px}
+.subwrap .ch1 {height:1500px}
+.subwrap .ch2 {height:15d00px}
 
 .subwrap .title {
 font-size:100pt;
 font-weight:900;
 color:#cc160b}
-
 .subwrap .subtitle {font-size:18pt; font-weight:800}
+
 .subwrap .body {
 width:1280px;
-height:800px;
+height:1300px;
+margin:20px 0;
 background:#dfdbdb;
-margin-top:20px
+color:#898989;
+font-size:70px;
+font-weight:800
 }
 
+.subwrap .ch1 .body div {padding:560px}
+.subwrap .ch2 .body div {padding:550px}
 
