@@ -1,0 +1,52 @@
+.container {width:1280px; height:100%; margin: 0 auto}
+
+.header {
+width:100%;
+margin:0 auto
+}
+
+.header .header-line {
+width:100%; height:40px; 
+background:#cc160b
+}
+
+.header .header-inner {
+width:100%; height:98px; clear:both
+}
+
+.header .header-inner .logo {
+float:left;
+padding:10px 0
+}
+.header .header-inner .navlist {float:right}
+.header .header-inner .navlist li {float:left}
+.header .header-inner .navlist li a:hover {color:#cc160b}
+.header .header-inner .navlist li a {
+display:block;
+font-size:15pt;
+font-weight:600;
+padding:20px 40px
+}
+
+.mainwrap {min-width:1280px; margin:0 auto; margin:50px 0}
+.mainwrap .banner { }
+.mainwrap .banner img {margin:20px}
+
+.subwrap {min-width:1280px; margin:0 auto}
+.subwrap .ch1 {height:800px}
+.subwrap .ch2 {height:1200px}
+
+.subwrap .title {
+font-size:100pt;
+font-weight:900;
+color:#cc160b}
+
+.subwrap .subtitle {font-size:18pt; font-weight:800}
+.subwrap .body {
+width:1280px;
+height:800px;
+background:#dfdbdb;
+margin-top:20px
+}
+
+
