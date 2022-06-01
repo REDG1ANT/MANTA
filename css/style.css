@@ -1,92 +1,152 @@
-.container {width:1280px; height:100%; margin: 0 auto}
+/* 기본 색상 변수에 담기 */
+  html {
+      --color-texta: #1d1d1d;
+      --color-textb: #fff;
+  }
+/* 시스템 커서 안 보이게 숨기기 */
+  body {
+      cursor: none;
+  }
+  /* 커스텀 커서 스타일 정의해주기 */
+  .cursor {
+      width: 3rem;
+      height: 3rem;
+      border: 2px solid var(--color-texta);
+      border-radius: 50%;
+      position: absolute;
+      z-index: 1000;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      transition: all 0.3s ease;
+      transition-property: background, transform;
+      transform-origin: 100% 100%;
+      backdrop-filter: sepia(20%);
+      background-size: cover;
+  }
 
-.header {
-width:100%;
-margin:0 auto;
-display:flex;
+.cursor-grow {
+    transform: scale(2);
+    background-color: var(--color-texta);
+}
+
+/* 점선이 들어갈 ::after(pseudo)요소 만들고 크기값 설정해주기*/
+  .gnb li a:hover::after {
+    width: calc(100% - 2rem);
+    height: 3px;
+    background-size: contain; /* 배경 이미지(svg)가 알맞게 들어가도록*/
+  }
+/* hover된 링크의 글자 색상 정의(하얀색)*/
+/* .hovered-link 선택자명은 추후 JS로 추가할 예정!*/
+  .hovered-link {
+      color: var(--color-textb) !important;
+  }
+/* .gnb li a:hover::after의 svg에 배경이미지 지정!*/
+  .hovered-link::after {
+      background-image: url("../img/white_dot.svg");
+  }
+
+
+body {min-width:100%; margin:0 auto}
+
+header {
 position:fixed;
-top: 0;
-left: 0;
-right: 0;
-border-bottom:5px solid #cc160b
-}
+left:0;
+righ t:0;
+top:0;
+padding:30px 70px;
+background:#fff;
+z-index:100;
+width:100%;
+display:flex}
 
-.header .header-inner {
-width:100%; height:80px; clear:both; background:#fff
-}
+header nav ul {
+display:flex;
+justify-content:center;
+font-weight:700;
+line-height}
 
-.header .header-inner .logo {
-float:left;
-padding:15px 0 0 30px}
+header nav ul li {margin:0 50px}
+header nav ul li a:hover {color:#cc160b}
+header nav img {float:left}
 
-.header .header-inner .navlist {float:right}
+.section {display:flex; justify-content:center}
 
-.header .header-inner .navlist li {float:left}
-.header .header-inner .navlist li a:hover {color:#cc160b}
-.header .header-inner .navlist li a {
-display:block;
+.banner {color:#cc160b; text-align:center; padding-top:40px}
+
+.title {
+font-size:70pt;
+font-weight:900;
+color:#cc160b;
+text-align:center;
+letter-spacing:-3px}
+
+.subtitle {
 font-size:15pt;
 font-weight:500;
-padding:30px 40px
+color:#171717;
+text-align:center;
+letter-spacing:-1.5px}
+
+.mbox {display:flex;
+justify-content:space-between;
+margin:100px 0 0 0;
 }
 
-.mainwrap {min-width:1280px; margin:50px 0}
-.mainwrap .banner {}
-.mainwrap .banner img { }
-
-.subwrap {min-width:1280px; margin:0 auto}
-.subwrap .ch1 {height:1000px}
-.subwrap .ch2 {height:1500px}
-
-.subwrap .gap {height:200px}
-
-.subwrap .title {
-font-size:100pt;
-font-weight:900;
-color:#cc160b}
-.subwrap .subtitle {
-font-size:18pt;
-font-weight:500;
-color:#fff;
+.sbox1 {
+width:50%;
 background:#cc160b;
-display:inline}
-
-.sbox1 { }
-
-.sbox1 .stxt1 {width:1280px; height:230px;
-background:#dadada;
-font-weight:700;
-margin-top:110px;
 text-align:center;
-font-size:20px;
-padding-top:50px;
-border-left:12px solid #cc160b;
-border-right:12px solid #cc160b}
+color:#fff;
+padding:80px;
+margin-left:250px;
+line-height:1.7;
+font-size:14pt
+}
 
-.stxt2 {width:1280px; height:230px;
-background:#dadada; 
-font-weight:700;
-margin-top:75px;
+
+.sbox2 {
+width:50%;
+height:20%;
+background:#585858;
 text-align:center;
-font-size:20px;
-padding-top:50px;
-border-left:12px solid #cc160b;
-border-right:12px solid #cc160b}
+color:#fff;
+padding:80px;
+margin-right:250px;
+line-height:1.7;
+font-size:14pt
+}
 
-.red {color:#cc160b}
+.sbox1 h4 {font-weight:300}
+.sbox2 h4 {font-weight:300}
+
+.bold {font-weight:600}
+
+.mdot1 {display:flex; margin:100px 0 0 0}
+.mdot1 .dot {
+margin:0 auto;
+width:300px;
+height:300px;
+background:#585858;
+border:15px solid #585858;
+border-radius:50%;
+}
+
+.footer {
+font-size:13pt;
+font-weight:400;
+color:#6E6E6E;
+background:#171717;
+text-align:center;
+padding:40px;
+}
+
+
 
 /*
-
-.subwrap .body {
-width:1280px;
-height:1300px;
-margin:20px 0;
-background:#dfdbdb;
-color:#898989;
-font-size:70px;
-font-weight:800
-}
-
-.subwrap .ch1 .body div {padding:560px}
-.subwrap .ch2 .body div {padding:550px} */
-
+.stxt {font-weight:500; text-align:center}
+.m1 {font-size:200px; font-weight:800; letter-spacing:-10px}
+.m2 {font-size:100px; font-weight:800; display:inline}
+.s1 {font-size:100px}
+.s2 {font-size:50px}
+.s3 {}
+*/

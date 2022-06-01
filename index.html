@@ -2,73 +2,139 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>index</title>
+<title>RIP.RED</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
-<link rel="stylesheet" type="text/css" href="css/reset.css" />
-<link rel="javasc"type="text/css"  href="css/reset.css" />
-
+<link rel="stylesheet" type="text/css" href="css/reset.css" / >
+<link rel="stylesheet" href="css/jquery.fullPage.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/jquery.fullPage.js"></script>
+<script src="js/main.js"></script>
+<link rel="shortcut icon" href="img/fav/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="img/fav/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="img/fav/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/fav/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/fav/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="img/fav/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="img/fav/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 </head>
 <body bgcolor="f0f0f0">
-<div class="container">
-  <!-- 헤더 시작 -->
-	<div class="header" id="scroll_move">
-		<div class="header-inner">
-			<div class="logo"><a href="#"><img src="img/logo.png" alt="#" /></div></a>
-			<ul class="navlist">
-				<li><a href="#home" class="scroll_move">Home</a></li>
-				<li><a href="#what" class="scroll_move">What</a></li>
-				<li><a href="#how" class="scroll_move">How</a></li>
-				<li><a href="#if" class="scroll_move">If</a></li>
-			</ul>
-		</div>
-  <!-- 헤더 끝 -->
-
-	</div>
-  <!-- 바디 시작 -->
-
-	<div class="mainwrap">
-		<div class"banner"><img src="img/banner.png" alt=""></div>
-		<div class="subwrap">
-			<div class="gap"></div>
-			<div class="ch1" id="what">
-				<div class="title">WHAT IS RED</div>
-				<div class="subtitle">&nbsp;&nbsp;: 빨강의 정의&nbsp;&nbsp;</div>
-		    	<div class="body">
-					<div class="sbox1">
-						<div class="stxt1">
-							<span class="red">수천 년 동안 서구 사회에서 빨강은 색이라 불릴 만한 유일한 색이었다.</span><br /><br />
-							시간적으로나 위계상으로나 빨강은 다른 모든 색들보다 앞섰다.
-							<br />
-							인간은 빨강을 기반으로 하여 처음으로 색 체험을 하고, 성공을 맛보았으며, 자신의 채색된 우주를 구축했다.<br />
-							빨강을 나타내는 아주 오랜 옛날의 어휘들을 통해 알 수 있듯이
-							인간은 일찍부터 빨강으로 다양한 색조와 뉘앙스를 만들어 냈다.
-						</div>
-					</div>
-					<div class="sbox2">
-						<div class="stxt2">
-							장신구와 보석, 수호하고 장식하고 행운을 불러오는 부적처럼 몸에 지니고 다니는
-							온갖 소품에 이르기까지 빨강은 일찍부터 그 위상이 높았다.<br />
-							각종 공연이나 제의에서도 빨강은 권력이나 신성함과 연관되었고,<br />
-							매우 풍요로운 상징체계를 갖고 있었으며, 때로는 초자연적인 힘을 지닌 것처럼 보였다.
-							<br /><br />
-							<span class="red">이처럼 여러 가지 면에서 빨강은 고대 사회에서 가장 원초의 색이었을 뿐 아니라 가장 우월한 색이었다.</span>
-						</div>
-					</div>
-				</div>
-			</div>			
-			<div class="ch2" id="how">
-				<div class="title">HOW RED WORKED</div>
-				<div class="subtitle">&nbsp;&nbsp;: 빨강의 상징성&nbsp;&nbsp;</div>
-		    	<div class="body"><div>내용2</div></div>
-			</div>
-
-		</div>
-  <!-- 바디 끝 -->
-	</div>
 	
-</div>
 
-<script type="text/javascript" src="js/move.js"></script> 	
+	
+	<header>
+		<div class="cursor"></div>
+		<nav>
+			<div class="logo"><img src="img/logo.png" /></div>
+			<ul class="gnb">
+				<li data-menuanchor="section1" ><a href="#section1">HOME</a></li>
+				<li data-menuanchor="section2"><a href="#section2">WHAT</a></li>
+				<li data-menuanchor="section3"><a href="#section3">HOW</a></li>
+				<li data-menuanchor="section3"><a href="#section4">IF</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main id="fullpage">
+		<section class="section">
+			<h2 class="banner"><img src="img/banner.png" alt="" /></h2>
+			<!-- <h1 class="stxt"><div>[명사]<br />1. 빨간 빛깔이나 물감. <br />2. [미술] 기본색의 하나. 먼셀 표색계에서는 7.5R 4/14에 해당한다.</div></h1>
+			<h2 class="banner"><div class="m1">RED</div>
+				<span class="m2">赤</span>
+				<div class="m3">rojo</div>
+				<span class="s1">hóng sè</span>
+				<div class="s2">あか</div>
+				<div class="s3">красный цвет</div></h2> -->
+		</section>
+		<section class="section">
+			<h2 class="title">WHAT IS RED</h2>
+			<h3 class="subtitle"> 빨강의 정의</h3>
+			<div class="mbox">
+				<div class="sbox1">
+					<h4>수천 년 동안 서구 사회에서 빨강은 <span class="bold">색이라 불릴 만한 유일한 색</span>이었다.<br />
+						시간적으로나 위계상으로나 빨강은 다른 모든 색들보다 앞섰다.<br />
+						인간은 빨강을 기반으로 하여 처음으로 색 체험을 하고, 성공을 맛보았으며, 자신의 채색된 우주를 구축했다.<br />
+						빨강을 나타내는 아주 오랜 옛날의 어휘들을 통해 알 수 있듯이
+						인간은 일찍부터 빨강으로 다양한 색조와 뉘앙스를 만들어 냈다.<br />
+					</h4>
+				</div>
+				<div class="sbox2">
+					<h4>장신구와 보석, 수호하고 장식하고 행운을 불러오는 부적처럼 몸에 지니고 다니는
+						온갖 소품에 이르기까지 빨강은 일찍부터 그 위상이 높았다.<br />
+						각종 공연이나 제의에서도 빨강은  <span class="bold">권력이나 신성함</span>과 연관되었고,<br />
+						매우 <span class="bold">풍요로운 상징체계</span>를 갖고 있었으며, 때로는 <span class="bold">초자연적인 힘</span>을 지닌 것처럼 보였다.<br />
+						여러 가지 면에서 빨강은 고대 사회에서 <span class="bold">가장 원초의 색</span>이었을 뿐 아니라 <span class="bold">가장 우월한 색</span>이었다.</h4>
+				</div>
+			</div>
+			
+		</section>		
+		<section class="section">
+			<h2 class="title">HOW RED WORKED</h2>
+			<h3 class="subtitle">빨강의 상징성</h3>
+			<div class="mdot1">
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+			</div>
+			<div class="mdot2">
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+			</div>
+		</section>
+			
 
+		<section class="section">
+			<div class="slide">			
+				<h2 class="title">IF RED DISAPPEARS</h2>
+				<h3 class="subtitle">빨강이 없어진다면</h3>
+			<div class="slide">slide 02</div>
+			<div class="slide">slide 03</div>
+		</section>		
+		<section class="section fp-auto-height">
+			<h2 class="footer">© 2022 RIP.RED ALL RIGHTS RESERVED</h2>
+		</section>
+	</main>
+
+
+	
+<script>
+  let mouseCursor = document.querySelector(".cursor");
+  let navLinks = document.querySelectorAll(".gnb li a"); //메뉴 링크
+  //window 객체에 scroll & mouse 이벤트를 추가하고 cursor함수 실행되도록 함
+  window.addEventListener("scroll", cursor);
+  window.addEventListener("mousemove", cursor);
+  //커스텀 커서의 left값과 top값을 커서의 XY좌표값과 일치시킴
+  function cursor(e) {
+    mouseCursor.style.left = e.pageX + "px";
+    mouseCursor.style.top = e.pageY - scrollY + "px";
+}
+	
+  navLinks.forEach((link) => {
+    link.addEventListener("mouseover", () => {
+      mouseCursor.classList.add("link-grow");
+      mouseCursor.style.zIndex = "-1";
+      link.classList.add("hovered-link");
+    });
+    link.addEventListener("mouseleave", () => {
+      mouseCursor.classList.remove("link-grow");
+      mouseCursor.style.zIndex = "1000";
+      link.classList.remove("hovered-link");
+    });
+  });
+</script>
+		
+	
+	
 </body>
+
 </html>
