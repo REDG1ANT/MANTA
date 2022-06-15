@@ -1,49 +1,53 @@
-/* 기본 색상 변수에 담기 */
+
   html {
       --color-texta: #1d1d1d;
       --color-textb: #fff;
   }
-/* 시스템 커서 안 보이게 숨기기 */
+
+/*
   body {
       cursor: none;
   }
-  /* 커스텀 커서 스타일 정의해주기 */
+
   .cursor {
-      width: 3rem;
-      height: 3rem;
-      border: 2px solid var(--color-texta);
-      border-radius: 50%;
-      position: absolute;
-      z-index: 1000;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      transition: all 0.3s ease;
-      transition-property: background, transform;
-      transform-origin: 100% 100%;
-      backdrop-filter: sepia(20%);
-      background-size: cover;
-  }
+width: 3rem;
+height: 3rem;
+border: 2px solid var(--color-texta);
+border-radius: 50%;
+position: absolute;
+z-index: 1000;
+transform: translate(-50%, -50%);
+pointer-events: none;
+transition: all 0.3s ease;
+transition-property: background, transform;
+transform-origin: 100% 100%;
+backdrop-filter: sepia(20%);
+background-size: cover
+}
+*/
 
 .cursor-grow {
-    transform: scale(2);
-    background-color: var(--color-texta);
+transform: scale(2);
+background-color: var(--color-texta)
 }
 
-/* 점선이 들어갈 ::after(pseudo)요소 만들고 크기값 설정해주기*/
-  .gnb li a:hover::after {
-    width: calc(100% - 2rem);
-    height: 3px;
-    background-size: contain; /* 배경 이미지(svg)가 알맞게 들어가도록*/
-  }
-/* hover된 링크의 글자 색상 정의(하얀색)*/
-/* .hovered-link 선택자명은 추후 JS로 추가할 예정!*/
-  .hovered-link {
-      color: var(--color-textb) !important;
-  }
-/* .gnb li a:hover::after의 svg에 배경이미지 지정!*/
-  .hovered-link::after {
-      background-image: url("../img/white_dot.svg");
-  }
+
+.gnb li a:hover::after {
+width: calc(100% - 2rem);
+height: 3px;
+background-size: contain
+}
+
+/*
+.hovered-link {
+color: var(--color-textb) !important
+}
+
+
+.hovered-link::after {
+background-image: url("../img/white_dot.svg")
+}
+*/
 
 
 body {min-width:100%; margin:0 auto}
@@ -78,21 +82,37 @@ font-size:70pt;
 font-weight:900;
 color:#cc160b;
 text-align:center;
-letter-spacing:-3px}
+letter-spacing:-3px;
+position: relative;
+transition-delay: 0.3s;
+animation: fadeInDown 5s;
+}
+
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, -100%, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translateZ(0);
+        }
+    }
 
 .subtitle {
 font-size:15pt;
 font-weight:500;
 color:#171717;
 text-align:center;
-letter-spacing:-1.5px}
+letter-spacing:-1.5px;
+animation: fadeInDown 8s}
 
 .mbox {display:flex;
 justify-content:space-between;
 margin:100px 0 0 0;
 }
 
-.sbox1 {
+.mbox .sbox1 {
 width:50%;
 background:#cc160b;
 text-align:center;
@@ -104,7 +124,8 @@ font-size:14pt
 }
 
 
-.sbox2 {
+
+.mbox .sbox2 {
 width:50%;
 height:20%;
 background:#585858;
@@ -116,20 +137,93 @@ line-height:1.7;
 font-size:14pt
 }
 
-.sbox1 h4 {font-weight:300}
-.sbox2 h4 {font-weight:300}
+.mbox .sbox1 h4 {font-weight:300}
+.mbox .sbox2 h4 {font-weight:300}
 
 .bold {font-weight:600}
 
-.mdot1 {display:flex; margin:100px 0 0 0}
-.mdot1 .dot {
-margin:0 auto;
-width:300px;
-height:300px;
-background:#585858;
-border:15px solid #585858;
-border-radius:50%;
+.mdot {display:flex; margin:100px 0 0 0}
+
+
+.mdot .txt {position:relative; top:80%; left:45%;
+font-size:20px;
+font-weight:500;
+color:#fff;
 }
+
+.set {
+width:100%;
+height:auto;
+transform-style:preserve-3d;
+transition: all 1.5s;
+margin-right:150px; margin-left:150px;
+}
+
+.set .dot {
+width:150px;
+height:400px;
+font-size:35px;
+backface-visibility:hidden;
+transition:1s;
+}
+
+.set .dot.front {
+position:absolute;
+transform:rotateY(0deg);
+}
+
+.set:hover .dot.front {
+transform:rotateY(180deg);
+}
+
+.set .dot.back {
+transform:rotateY(-180deg);
+}
+
+.set:hover .dot.back {
+transform:rotateY(0deg);
+}
+
+.set .dot.back {position:relative; top:50px}
+
+.set p {position:relative; top:-170px; left:65%;
+font-size:30px;
+font-weight:600;
+color:#fff;
+}
+
+
+.ep1 {width:100%; height:1000px;
+background:url("../img/bg.png") no-repeat 0 0;
+object-fit:contain;
+position:relative
+}
+
+.ep1:hover {background:url("../img/bg2.png") no-repeat 0 0}
+
+.car {position:absolute; top:500px; left:910px;
+transition: all 0.5s linear}
+
+.car:hover {
+transform: scale(3);
+}
+
+.human {position:absolute; top:550px; left:800px}
+
+.ep2 {width:100%; height:1000px;
+background:url("../img/bg3.png") no-repeat 0 0;
+object-fit:contain;
+position:relative
+}
+
+.ep2:hover {background:url("../img/bg4.png") no-repeat 0 0}
+.human2 {position:absolute; top:80px; left:250px;
+transition: all 0.5s linear}
+
+.human2:hover{
+transform:rotateZ(15deg)
+}
+
 
 .footer {
 font-size:13pt;
@@ -142,11 +236,3 @@ padding:40px;
 
 
 
-/*
-.stxt {font-weight:500; text-align:center}
-.m1 {font-size:200px; font-weight:800; letter-spacing:-10px}
-.m2 {font-size:100px; font-weight:800; display:inline}
-.s1 {font-size:100px}
-.s2 {font-size:50px}
-.s3 {}
-*/

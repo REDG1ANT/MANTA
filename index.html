@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>RIP.RED</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
-<link rel="stylesheet" type="text/css" href="css/reset.css" / >
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
 <link rel="stylesheet" href="css/jquery.fullPage.css" />
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="js/jquery.fullPage.js"></script>
@@ -37,10 +37,10 @@
 		<nav>
 			<div class="logo"><img src="img/logo.png" /></div>
 			<ul class="gnb">
-				<li data-menuanchor="section1" ><a href="#section1">HOME</a></li>
-				<li data-menuanchor="section2"><a href="#section2">WHAT</a></li>
-				<li data-menuanchor="section3"><a href="#section3">HOW</a></li>
-				<li data-menuanchor="section3"><a href="#section4">IF</a></li>
+				<li data-menuanchor="section1" class="hovered-link"><a href="#section1">HOME</a></li>
+				<li data-menuanchor="section2" class="hovered-link"><a href="#section2">WHAT</a></li>
+				<li data-menuanchor="section3" class="hovered-link"><a href="#section3">HOW</a></li>
+				<li data-menuanchor="section4" class="hovered-link"><a href="#section4">IF</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -80,15 +80,19 @@
 		<section class="section">
 			<h2 class="title">HOW RED WORKED</h2>
 			<h3 class="subtitle">빨강의 상징성</h3>
-			<div class="mdot1">
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-			</div>
-			<div class="mdot2">
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
+			<div class="mdot">
+				<div class="set">
+					<div class="dot front"><img src="img/dot1.png" alt=""></div>
+					<div class="dot back"><img src="img/dot1-1.png" alt=""><p>권력·행운</p></div>
+				</div>
+				<div class="set">
+					<div class="dot front"><img src="img/dot2.png" alt=""></div>
+					<div class="dot back"><img src="img/dot2-1.png" alt=""><p>사랑·애정</p></div>
+				</div>
+				<div class="set">
+					<div class="dot front"><img src="img/dot3.png" alt=""></div>
+					<div class="dot back"><img src="img/dot3-1.png" alt=""><p>위협·경고</p></div>
+				</div>
 			</div>
 		</section>
 			
@@ -97,11 +101,22 @@
 			<div class="slide">			
 				<h2 class="title">IF RED DISAPPEARS</h2>
 				<h3 class="subtitle">빨강이 없어진다면</h3>
-			<div class="slide">slide 02</div>
-			<div class="slide">slide 03</div>
+			</div>
+			<div class="slide">
+				<div class="ep1">
+				<div class="car"><img src="img/car.png" alt="" /></div>
+				<div class="human"><img src="img/human.png" alt=""></div>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="ep2">
+				<div class="human2"><img src="img/human2.png" alt="" /></div>
+				</div>
+			</div>
+				
 		</section>		
 		<section class="section fp-auto-height">
-			<h2 class="footer">© 2022 RIP.RED ALL RIGHTS RESERVED</h2>
+			<h2 class="footer">© 2022. Yujin-Jung ALL RIGHTS RESERVED</h2>
 		</section>
 	</main>
 
@@ -109,11 +124,9 @@
 	
 <script>
   let mouseCursor = document.querySelector(".cursor");
-  let navLinks = document.querySelectorAll(".gnb li a"); //메뉴 링크
-  //window 객체에 scroll & mouse 이벤트를 추가하고 cursor함수 실행되도록 함
+  let navLinks = document.querySelectorAll(".gnb li a");
   window.addEventListener("scroll", cursor);
   window.addEventListener("mousemove", cursor);
-  //커스텀 커서의 left값과 top값을 커서의 XY좌표값과 일치시킴
   function cursor(e) {
     mouseCursor.style.left = e.pageX + "px";
     mouseCursor.style.top = e.pageY - scrollY + "px";
